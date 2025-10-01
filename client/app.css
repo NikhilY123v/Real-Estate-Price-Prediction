@@ -1,0 +1,137 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #232526, #414345); /* Outer dark gradient */
+}
+
+/* Glass effect container with matching dark gradient */
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(50,50,50,0.6), rgba(70,70,70,0.6)); /* Darker grey, matches background */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
+  text-align: center;
+  color: #fff;
+}
+
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Inputs */
+.area, .location {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.area::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.location {
+  appearance: none;
+  cursor: pointer;
+  color: #fff; /* Text color for dropdown */
+  background: rgba(50,50,50,0.6); /* matching with container */
+}
+
+.location option {
+  color: #000; /* Options text color inside dropdown */
+  background: #fff; /* Options background color */
+}
+
+
+/* Radio buttons */
+.switch-field {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.switch-field input {
+  display: none;
+}
+
+.switch-field label {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.switch-field input:checked + label {
+  background: #1e90ff; /* Highlight when selected */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transform: scale(1.05);
+}
+
+/* Button */
+.submit {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #1e90ff, #00bfff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background: linear-gradient(45deg, #00bfff, #1ca9c9);
+  transform: scale(1.07);
+}
+
+/* Result */
+.result {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
